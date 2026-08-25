@@ -112,7 +112,7 @@
       return res.json();
     })
     .then(function (entries) {
-      var dirs = entries.filter(function (e) { return e.type === "dir"; });
+      var dirs = entries.filter(function (e) { return e.type === "dir" && e.name !== "assets"; });
       if (!dirs.length) throw new Error("No profile folders found");
 
       return Promise.all(

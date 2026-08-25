@@ -4,6 +4,17 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.0.3]
+
+### Fixed
+- **Profiles page listed `assets/` as a broken profile card** -
+  `profiles.js` fetched `TIGHC-Profiles`' directory listing and treated
+  every folder as a profile, so the submodule's own `assets/` folder
+  (icon/logo images) showed up as a card with "Couldn't load this
+  profile's keybinds.json." `dirs` now excludes `assets` by name, mirroring
+  the same non-profile-folder skip the main TIGHC engine's
+  `load_profiles()` does.
+
 ## [1.0.2]
 
 ### Fixed

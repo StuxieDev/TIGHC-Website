@@ -18,6 +18,9 @@ Repository: https://github.com/StuxieDev/TIGHC-Website
 
 **[StuxieDev](https://github.com/StuxieDev)**
 
+<br>
+<br>
+
 ## Structure
 
 ```

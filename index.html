@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIGHC — The Intiface Game Haptics Controller</title>
+<meta name="description" content="TIGHC links your keyboard and mouse input to a Buttplug/Intiface haptic toy while you game, with per-game profiles, per-motor targeting, and a full GUI. Open source, Windows &amp; Linux/Steam Deck.">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="age-gate" class="age-gate">
+  <div class="age-gate-box">
+    <img src="assets/logo.png" alt="TIGHC" class="age-gate-logo">
+    <p><strong>This site describes 18+ software.</strong></p>
+    <p>TIGHC connects to and controls adult haptic/sex toy devices based on
+    your keyboard and mouse input while gaming. It's intended only for
+    adults aged 18 or older.</p>
+    <div class="age-gate-actions">
+      <button id="age-confirm" class="btn btn-accent">I'm 18 or older — enter</button>
+      <a href="https://www.google.com" class="btn btn-ghost">Leave</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/icon.png" alt="" class="brand-icon">
+      <span>TIGHC</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="#get-started">Get started</a>
+      <a href="https://github.com/StuxieDev/TIGHC" class="nav-gh">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <img src="assets/logo.png" alt="TIGHC — The Intiface Game Haptics Controller" class="hero-logo">
+      <p class="hero-tagline">Haptic feedback for your games, driven by the keys you're already pressing.</p>
+      <p class="hero-sub">
+        TIGHC links your keyboard/mouse input to a
+        <a href="https://intiface.com/" target="_blank" rel="noopener">Buttplug/Intiface</a>
+        toy. Sneak, sprint, attack, jump — each action can drive its own
+        motor, at its own intensity, per game.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/StuxieDev/TIGHC" class="btn btn-accent">View on GitHub</a>
+        <a href="#get-started" class="btn btn-ghost">Get started</a>
+      </div>
+      <p class="hero-meta">
+        <span class="badge">v3.3.0</span>
+        <span class="badge">Windows · Linux · Steam Deck</span>
+        <span class="badge">Open source</span>
+      </p>
+      <p class="hero-warning">18+ only. See the notice above for details.</p>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2>What it does</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Per-game profiles</h3>
+          <p>Each game gets its own profile — keybinds, intensity ranges,
+          and window-title matching. TIGHC watches whatever window has
+          focus and switches profiles automatically as you alt-tab.</p>
+        </div>
+        <div class="card">
+          <h3>Per-motor targeting</h3>
+          <p>Every capability a device exposes — each motor's vibrate,
+          oscillate, rotate — is its own independently controllable
+          channel, nicknamed and targeted individually by a keybind, a
+          group of keybinds, or all of them at once.</p>
+        </div>
+        <div class="card">
+          <h3>Continuous &amp; pulse bindings</h3>
+          <p>Sustained actions like movement or sneaking drive a
+          continuous vibration for as long as they're held; one-shot
+          actions like jumping or opening an inventory fire a randomized
+          pulse instead.</p>
+        </div>
+        <div class="card">
+          <h3>Randomized intensity bands</h3>
+          <p>Every binding rolls its intensity (and pulse duration) from a
+          configurable <code>[low, high]</code> range, so nothing feels
+          mechanically repetitive.</p>
+        </div>
+        <div class="card">
+          <h3>Full GUI, or hand-edit JSON</h3>
+          <p>Connect to Intiface, scan devices, assign nicknames, build
+          profiles, and tune settings — all from one interactive window.
+          Prefer the terminal? <code>cli.py</code> runs the same engine
+          headlessly from whatever's already on disk.</p>
+        </div>
+        <div class="card">
+          <h3>Test mode &amp; panic key</h3>
+          <p>Simulate any profile's keybinds without the game running, or
+          drive a channel manually with a slider. A configurable panic key
+          forces everything off instantly, any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section section-alt">
+    <div class="container">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <div>
+            <h3>Connect</h3>
+            <p>Point TIGHC at your running <a href="https://intiface.com/central/" target="_blank" rel="noopener">Intiface Central</a>
+            instance and scan for devices.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div>
+            <h3>Name your channels</h3>
+            <p>Give each motor/capability a nickname that sticks across
+            reconnects and rescans.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div>
+            <h3>Pick or build a profile</h3>
+            <p>Use an included profile or start a new one from a template,
+            mapping keys/buttons to channels and intensity ranges.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <div>
+            <h3>Play</h3>
+            <p>Start the engine and play. TIGHC follows the focused window,
+            switching profiles automatically as you switch games.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="profiles" class="section">
+    <div class="container">
+      <h2>Game profiles</h2>
+      <p class="section-lede">
+        Profiles live in a separate, shared repository —
+        <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">TIGHC-Profiles</a> —
+        checked out as a submodule, so new games and updates ship
+        independently of the engine itself.
+      </p>
+      <p class="section-note">
+        See the <a href="profiles.html">full profiles page</a> for the
+        current list — bindings, window matching, and confirmation status
+        for each — fetched live from the profiles repository. Adding a new
+        one takes a copy of an existing profile folder and a few edits to
+        keybinds and ranges, from the GUI's "New profile..." button or by
+        hand.
+      </p>
+      <a href="profiles.html" class="btn btn-ghost">Browse all profiles</a>
+    </div>
+  </section>
+
+  <section id="get-started" class="section section-alt">
+    <div class="container">
+      <h2>Get started</h2>
+      <p class="section-lede">Clone with submodules so the bundled profiles come with it:</p>
+      <pre class="code-block"><code>git clone --recurse-submodules https://github.com/StuxieDev/TIGHC.git
+cd TIGHC
+python gui.py</code></pre>
+      <p class="section-note">
+        Already cloned without <code>--recurse-submodules</code>? Run
+        <code>git submodule update --init</code> once from the repo root.
+        Prefer the terminal? <code>python cli.py</code> runs headlessly
+        instead of opening the GUI.
+      </p>
+      <div class="grid grid-2 platform-grid">
+        <div class="card">
+          <h3>Windows</h3>
+          <p>The primary target. Run <code>python gui.py</code> and follow
+          the on-screen setup — connect to Intiface, scan, and go.</p>
+        </div>
+        <div class="card">
+          <h3>Linux &amp; Steam Deck</h3>
+          <p>Fully supported, including Steam Deck's Desktop Mode — an X11
+          session is required rather than Wayland, since focused-window
+          detection and global input capture both need it. See the
+          <a href="https://github.com/StuxieDev/TIGHC/blob/main/LINUX_GUIDE.md" target="_blank" rel="noopener">Linux guide</a>
+          for the full walkthrough.</p>
+        </div>
+      </div>
+      <div class="hero-actions get-started-actions">
+        <a href="https://github.com/StuxieDev/TIGHC" class="btn btn-accent">Repository &amp; full docs</a>
+        <a href="https://github.com/StuxieDev/TIGHC/blob/main/CHANGELOG.md" class="btn btn-ghost">Changelog</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <img src="assets/icon.png" alt="" class="footer-icon">
+      <span>TIGHC — The Intiface Game Haptics Controller</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/StuxieDev/TIGHC">GitHub</a>
+      <a href="https://github.com/StuxieDev/TIGHC-Profiles">Profiles repo</a>
+      <a href="https://github.com/StuxieDev/TIGHC/issues">Issues &amp; contact</a>
+      <a href="https://github.com/StuxieDev">By StuxieDev</a>
+    </div>
+  </div>
+  <p class="footer-note">
+    Unaffiliated with Intiface/Nonpolynomial Labs. Requires your own
+    Buttplug/Intiface-compatible hardware. 18+ only.
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

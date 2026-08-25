@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profiles — TIGHC</title>
+<meta name="description" content="Every game profile bundled with TIGHC-Profiles, fetched live from the repo: keybinds, window matching, and continuous vs. pulse bindings for each.">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="age-gate" class="age-gate">
+  <div class="age-gate-box">
+    <img src="assets/logo.png" alt="TIGHC" class="age-gate-logo">
+    <p><strong>This site describes 18+ software.</strong></p>
+    <p>TIGHC connects to and controls adult haptic/sex toy devices based on
+    your keyboard and mouse input while gaming. It's intended only for
+    adults aged 18 or older.</p>
+    <div class="age-gate-actions">
+      <button id="age-confirm" class="btn btn-accent">I'm 18 or older — enter</button>
+      <a href="https://www.google.com" class="btn btn-ghost">Leave</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/icon.png" alt="" class="brand-icon">
+      <span>TIGHC</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="profiles.html" class="active">Profiles</a>
+      <a href="index.html#get-started">Get started</a>
+      <a href="https://github.com/StuxieDev/TIGHC" class="nav-gh">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero profiles-hero">
+    <div class="container hero-inner">
+      <h1 class="page-title">Game profiles</h1>
+      <p class="hero-sub">
+        Every profile below ships in
+        <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">TIGHC-Profiles</a>,
+        checked out as a submodule of the main repo. Each one maps a
+        game's default keybinds to <strong>continuous</strong> bindings
+        (sustained vibration while held) and <strong>pulse</strong>
+        bindings (a one-shot buzz per press) — TIGHC auto-selects the
+        matching profile from the focused window's title.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div id="profile-status" class="profile-status">Loading profiles from
+        <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">github.com/StuxieDev/TIGHC-Profiles</a>&hellip;</div>
+
+      <div id="profile-grid" class="profile-grid"></div>
+
+      <div class="card profiles-add-card">
+        <h3>Don't see your game?</h3>
+        <p>
+          Copy an existing profile folder (<code>minecraft/</code> is the
+          most complete example), rename it, and edit
+          <code>window_titles</code> plus <code>bindings</code> to match —
+          or use the GUI's <strong>Profiles → New profile...</strong>
+          button to do it interactively. Details in the
+          <a href="https://github.com/StuxieDev/TIGHC-Profiles#adding-a-new-profile" target="_blank" rel="noopener">TIGHC-Profiles README</a>.
+          Want to share it back? Open a PR against
+          <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">TIGHC-Profiles</a>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <img src="assets/icon.png" alt="" class="footer-icon">
+      <span>TIGHC — The Intiface Game Haptics Controller</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/StuxieDev/TIGHC">GitHub</a>
+      <a href="https://github.com/StuxieDev/TIGHC-Profiles">Profiles repo</a>
+      <a href="https://github.com/StuxieDev/TIGHC/issues">Issues &amp; contact</a>
+      <a href="https://github.com/StuxieDev">By StuxieDev</a>
+    </div>
+  </div>
+  <p class="footer-note">
+    Unaffiliated with Intiface/Nonpolynomial Labs. Requires your own
+    Buttplug/Intiface-compatible hardware. 18+ only.
+  </p>
+</footer>
+
+<script src="script.js"></script>
+<script src="profiles.js"></script>
+</body>
+</html>

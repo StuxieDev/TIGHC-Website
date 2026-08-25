@@ -4,6 +4,15 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.0.4]
+
+### Changed
+- **Internal links no longer include `.html`** - `index.html` and
+  `profiles.html` linked to each other as `profiles.html` /
+  `index.html#anchor`; switched to root-relative extensionless paths
+  (`/profiles`, `/`, `/#anchor`) since GitHub Pages serves both
+  `/profiles` and `/` without requiring the file extension.
+
 ## [1.0.3]
 
 ### Fixed

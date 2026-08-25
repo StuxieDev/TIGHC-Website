@@ -4,6 +4,14 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.0.5]
+
+### Changed
+- **Navbar GitHub button (`.nav-gh`) is now a primary/filled button** -
+  was an outline "ghost" style (border only, no fill); now uses the same
+  accent fill as `.btn-accent` (`var(--accent)` background, white text),
+  at the smaller nav padding/radius.
+
 ## [1.0.4]
 
 ### Changed

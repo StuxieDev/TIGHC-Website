@@ -9,7 +9,7 @@ for [TIGHC](https://github.com/StuxieDev/TIGHC) (The Intiface Game Haptics
 Controller). Plain HTML/CSS/JS, served directly from this repo via GitHub
 Pages - no build step.
 
-Website: https://tighc.stuxie.dev
+Website: https://tighc.stuxie.dev  
 Repository: https://github.com/StuxieDev/TIGHC-Website
 
 ## Author

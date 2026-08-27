@@ -39,6 +39,9 @@
       <a href="#get-started">Get started</a>
       <a href="https://github.com/StuxieDev/TIGHC" class="nav-gh">GitHub</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -59,8 +62,8 @@
         <a href="#get-started" class="btn btn-ghost">Get started</a>
       </div>
       <p class="hero-meta">
-        <span class="badge">v3.7.0</span>
-        <span class="badge">Profiles v1.2.0</span>
+        <span class="badge" data-version="engine">v3.7.0</span>
+        <span class="badge" data-version="profiles" data-version-prefix="Profiles ">Profiles v1.2.0</span>
         <span class="badge">Windows · Linux · Steam Deck</span>
         <span class="badge">Open source</span>
       </p>
@@ -220,6 +223,7 @@ python gui.py</code></pre>
     <div>
       <img src="assets/icon.png" alt="" class="footer-icon">
       <span>TIGHC — The Intiface Game Haptics Controller</span>
+      <span class="footer-ver" data-version="website"></span>
     </div>
     <div class="footer-links">
       <a href="https://github.com/StuxieDev/TIGHC">GitHub</a>
@@ -235,5 +239,6 @@ python gui.py</code></pre>
 </footer>
 
 <script src="script.js"></script>
+<script src="versions.js"></script>
 </body>
 </html>

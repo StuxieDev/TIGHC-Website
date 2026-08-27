@@ -39,6 +39,9 @@
       <a href="/#get-started">Get started</a>
       <a href="https://github.com/StuxieDev/TIGHC" class="nav-gh">GitHub</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -57,9 +60,9 @@
     <div class="container">
 
       <div class="cl-tabs" role="tablist">
-        <button class="cl-tab active" data-repo="engine" role="tab">Engine</button>
-        <button class="cl-tab" data-repo="profiles" role="tab">Profiles</button>
-        <button class="cl-tab" data-repo="website" role="tab">Website</button>
+        <button class="cl-tab active" data-repo="engine" role="tab">Engine<span class="tab-ver" data-version-inline="engine"></span></button>
+        <button class="cl-tab" data-repo="profiles" role="tab">Profiles<span class="tab-ver" data-version-inline="profiles"></span></button>
+        <button class="cl-tab" data-repo="website" role="tab">Website<span class="tab-ver" data-version-inline="website"></span></button>
       </div>
 
       <div id="cl-engine" class="cl-panel active">
@@ -82,6 +85,7 @@
     <div>
       <img src="assets/icon.png" alt="" class="footer-icon">
       <span>TIGHC — The Intiface Game Haptics Controller</span>
+      <span class="footer-ver" data-version="website"></span>
     </div>
     <div class="footer-links">
       <a href="https://github.com/StuxieDev/TIGHC">GitHub</a>
@@ -97,6 +101,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="versions.js"></script>
 <script src="changelogs.js"></script>
 </body>
 </html>

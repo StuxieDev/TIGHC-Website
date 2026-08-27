@@ -39,6 +39,9 @@
       <a href="/#get-started">Get started</a>
       <a href="https://github.com/StuxieDev/TIGHC" class="nav-gh">GitHub</a>
     </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -47,10 +50,14 @@
   <section class="hero profiles-hero">
     <div class="container hero-inner">
       <h1 class="page-title">Game profiles</h1>
+      <p class="hero-meta" style="margin-bottom:12px;">
+        <span class="badge" data-version="profiles" data-version-prefix="Profiles ">Profiles v1.2.0</span>
+        <span class="badge" data-version="engine" data-version-prefix="Engine ">Engine v3.7.0</span>
+      </p>
       <p class="hero-sub">
         Every profile below ships in
-        <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">TIGHC-Profiles</a>
-        (v1.2.0), checked out as a submodule of the main repo. Each one
+        <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">TIGHC-Profiles</a>,
+        checked out as a submodule of the main repo. Each one
         maps a game's default keybinds to vibration intensity ranges —
         pressing a key fires the vibration, holding sustains it, releasing
         stops it. TIGHC auto-selects the matching profile from the focused
@@ -91,6 +98,7 @@
     <div>
       <img src="assets/icon.png" alt="" class="footer-icon">
       <span>TIGHC — The Intiface Game Haptics Controller</span>
+      <span class="footer-ver" data-version="website"></span>
     </div>
     <div class="footer-links">
       <a href="https://github.com/StuxieDev/TIGHC">GitHub</a>
@@ -106,6 +114,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="versions.js"></script>
 <script src="profiles.js"></script>
 </body>
 </html>

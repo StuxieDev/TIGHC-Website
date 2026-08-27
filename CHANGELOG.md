@@ -4,6 +4,25 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.1.0]
+
+### Added
+- **Mobile & tablet support** — hamburger nav menu, responsive layouts at 760px
+  and 1000px breakpoints, touch-friendly tap targets, and horizontal scroll on
+  changelog tabs for narrow screens.
+- **Live version badges** via `versions.js` — fetches `version.txt` from each
+  repo on page load and populates version numbers site-wide (hero badges,
+  profiles page, changelogs tab labels, footer) rather than having them hardcoded.
+- **`version.txt`** — single source of truth for the website's own version number,
+  consumed by `versions.js` and displayed in the footer.
+
+### Changed
+- Hero badges on index and profiles pages now update live from GitHub.
+- Changelogs tab buttons show inline version numbers after fetching.
+- Footer shows live website version on all pages.
+- Feature grid collapses to 2 columns at tablet width (1000px) before going
+  single-column at mobile (760px).
+
 ## [1.0.9]
 
 ### Added

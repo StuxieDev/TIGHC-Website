@@ -1,6 +1,6 @@
 # TIGHC-Website
 
-**Version 1.0.1** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.1.1** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ![TIGHC](assets/logo.png)
 

@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.1.1]
+
+### Changed
+- Updated static fallback version badges to v3.8.0 (Engine) and v1.3.0 (Profiles).
+
 ## [1.1.0]
 
 ### Added

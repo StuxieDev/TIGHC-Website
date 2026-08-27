@@ -4,6 +4,17 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.0.8]
+
+### Changed
+- Profiles page hero text updated to describe the new unified binding model
+  (no more continuous/pulse distinction) and cites profiles v1.2.0.
+- Meta description updated to remove continuous/pulse wording.
+- `profiles.js` now fetches `profile.json` instead of `keybinds.json`, and
+  renders a single "Bindings:" list per card rather than separate
+  "Continuous:" / "Pulse:" rows (which were always empty since mode was
+  removed in profiles v1.2.0).
+
 ## [1.0.7]
 
 ### Changed

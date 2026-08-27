@@ -37,9 +37,9 @@
     return String(id).replace(/_/g, " ");
   }
 
-  function bindingsByMode(bindings, mode) {
+  function enabledBindings(bindings) {
     return (bindings || [])
-      .filter(function (b) { return b.mode === mode && b.enabled !== false; })
+      .filter(function (b) { return b.enabled !== false; })
       .map(function (b) {
         var keys = keysLabel(b.keys);
         return keys ? idLabel(b.id) + " (" + keys + ")" : idLabel(b.id);
@@ -67,23 +67,17 @@
         : "<em>unknown</em>");
     article.appendChild(windowP);
 
-    var continuous = data ? bindingsByMode(data.bindings, "continuous") : "";
-    var pulse = data ? bindingsByMode(data.bindings, "pulse") : "";
-
-    if (continuous) {
-      var contP = document.createElement("p");
-      contP.innerHTML = "<strong>Continuous:</strong> " + escapeHtml(continuous);
-      article.appendChild(contP);
-    }
-    if (pulse) {
-      var pulseP = document.createElement("p");
-      pulseP.innerHTML = "<strong>Pulse:</strong> " + escapeHtml(pulse);
-      article.appendChild(pulseP);
-    }
-    if (!data) {
+    if (data) {
+      var bindings = enabledBindings(data.bindings);
+      if (bindings) {
+        var bindP = document.createElement("p");
+        bindP.innerHTML = "<strong>Bindings:</strong> " + escapeHtml(bindings);
+        article.appendChild(bindP);
+      }
+    } else {
       var errP = document.createElement("p");
       errP.className = "profile-error";
-      errP.textContent = "Couldn't load this profile's keybinds.json.";
+      errP.textContent = "Couldn't load this profile's profile.json.";
       article.appendChild(errP);
     }
 
@@ -117,7 +111,7 @@
 
       return Promise.all(
         dirs.map(function (dir) {
-          return fetch(RAW_BASE + dir.name + "/keybinds.json")
+          return fetch(RAW_BASE + dir.name + "/profile.json")
             .then(function (res) { return res.ok ? res.json() : null; })
             .catch(function () { return null; })
             .then(function (data) { return { dirName: dir.name, data: data }; });

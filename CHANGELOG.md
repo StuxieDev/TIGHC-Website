@@ -4,6 +4,15 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.0.6]
+
+### Changed
+- Version badge updated to v3.5.0.
+- "Per-game profiles" feature card notes exact/substring window-title matching
+  and case-sensitivity (added in TIGHC 3.4.0).
+- "Continuous & pulse bindings" feature card notes that releasing a key
+  mid-pulse cancels it immediately (added in TIGHC 3.5.0).
+
 ## [1.0.5]
 
 ### Changed

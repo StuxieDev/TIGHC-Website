@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profiles — TIGHC</title>
-<meta name="description" content="Every game profile bundled with TIGHC-Profiles, fetched live from the repo: keybinds, intensity ranges, and window matching for each game.">
+<title>Changelogs — TIGHC</title>
+<meta name="description" content="Full version history for TIGHC, TIGHC-Profiles, and TIGHC-Website.">
 <link rel="icon" type="image/png" href="assets/icon.png">
 <link rel="shortcut icon" href="assets/favicon.ico">
 <link rel="stylesheet" href="style.css">
@@ -34,8 +34,8 @@
     <nav class="site-nav">
       <a href="/#features">Features</a>
       <a href="/#how-it-works">How it works</a>
-      <a href="/profiles" class="active">Profiles</a>
-      <a href="/changelogs">Changelogs</a>
+      <a href="/profiles">Profiles</a>
+      <a href="/changelogs" class="active">Changelogs</a>
       <a href="/#get-started">Get started</a>
       <a href="https://github.com/StuxieDev/TIGHC" class="nav-gh">GitHub</a>
     </nav>
@@ -46,15 +46,9 @@
 
   <section class="hero profiles-hero">
     <div class="container hero-inner">
-      <h1 class="page-title">Game profiles</h1>
+      <h1 class="page-title">Changelogs</h1>
       <p class="hero-sub">
-        Every profile below ships in
-        <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">TIGHC-Profiles</a>
-        (v1.2.0), checked out as a submodule of the main repo. Each one
-        maps a game's default keybinds to vibration intensity ranges —
-        pressing a key fires the vibration, holding sustains it, releasing
-        stops it. TIGHC auto-selects the matching profile from the focused
-        window's title.
+        Version history for all three TIGHC repositories, fetched live from GitHub.
       </p>
     </div>
   </section>
@@ -62,23 +56,20 @@
   <section class="section">
     <div class="container">
 
-      <div id="profile-status" class="profile-status">Loading profiles from
-        <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">github.com/StuxieDev/TIGHC-Profiles</a>&hellip;</div>
+      <div class="cl-tabs" role="tablist">
+        <button class="cl-tab active" data-repo="engine" role="tab">Engine</button>
+        <button class="cl-tab" data-repo="profiles" role="tab">Profiles</button>
+        <button class="cl-tab" data-repo="website" role="tab">Website</button>
+      </div>
 
-      <div id="profile-grid" class="profile-grid"></div>
-
-      <div class="card profiles-add-card">
-        <h3>Don't see your game?</h3>
-        <p>
-          Copy an existing profile folder (<code>minecraft/</code> is the
-          most complete example), rename it, and edit
-          <code>window_titles</code> plus <code>bindings</code> to match —
-          or use the GUI's <strong>Profiles → New profile...</strong>
-          button to do it interactively. Details in the
-          <a href="https://github.com/StuxieDev/TIGHC-Profiles#adding-a-new-profile" target="_blank" rel="noopener">TIGHC-Profiles README</a>.
-          Want to share it back? Open a PR against
-          <a href="https://github.com/StuxieDev/TIGHC-Profiles" target="_blank" rel="noopener">TIGHC-Profiles</a>.
-        </p>
+      <div id="cl-engine" class="cl-panel active">
+        <p class="cl-loading">Loading&hellip;</p>
+      </div>
+      <div id="cl-profiles" class="cl-panel">
+        <p class="cl-loading">Loading&hellip;</p>
+      </div>
+      <div id="cl-website" class="cl-panel">
+        <p class="cl-loading">Loading&hellip;</p>
       </div>
 
     </div>
@@ -106,6 +97,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script src="profiles.js"></script>
+<script src="changelogs.js"></script>
 </body>
 </html>

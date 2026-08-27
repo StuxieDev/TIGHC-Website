@@ -306,6 +306,98 @@ code {
   .profile-grid { grid-template-columns: 1fr; }
 }
 
+/* Changelog page */
+.cl-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+.cl-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-dim);
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+  cursor: pointer;
+  margin-bottom: -1px;
+  border-radius: 0;
+  transition: color 0.15s;
+}
+.cl-tab:hover { color: var(--text); }
+.cl-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.cl-panel { display: none; }
+.cl-panel.active { display: block; }
+
+.cl-loading { color: var(--text-dim); }
+.cl-error { color: #d98c8c; }
+
+.cl-block {
+  border-left: 3px solid var(--border);
+  padding: 0 0 4px 20px;
+  margin-bottom: 36px;
+}
+.cl-block:first-child { margin-top: 4px; }
+
+.cl-version {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+  font-family: "Consolas", "Fira Mono", monospace;
+}
+
+.cl-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  margin: 10px 0 6px;
+}
+.cl-label-added    { background: rgba(52, 199, 89, 0.15);  color: #5de08a; }
+.cl-label-changed  { background: rgba(124, 92, 255, 0.18); color: #a78bfa; }
+.cl-label-fixed    { background: rgba(255, 179, 71, 0.15); color: #ffbe6a; }
+.cl-label-removed  { background: rgba(255, 69, 69, 0.15);  color: #f28b82; }
+.cl-label-breaking { background: rgba(255, 69, 69, 0.2);   color: #f28b82; }
+.cl-label-security { background: rgba(255, 179, 71, 0.15); color: #ffbe6a; }
+.cl-label-other    { background: var(--panel); color: var(--text-dim); }
+
+.cl-list {
+  list-style: none;
+  margin: 4px 0 10px;
+  padding: 0;
+}
+.cl-list li {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  padding: 3px 0 3px 18px;
+  position: relative;
+  line-height: 1.5;
+}
+.cl-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+.cl-list li.cl-sub { padding-left: 32px; }
+.cl-list li.cl-sub::before { left: 14px; color: var(--border); }
+.cl-list li strong { color: var(--text); font-weight: 600; }
+.cl-list li code { font-size: 0.85em; }
+
+.cl-prose {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);

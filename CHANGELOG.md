@@ -4,6 +4,15 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.0.9]
+
+### Added
+- **Changelogs page** (`/changelogs`) — fetches and renders the CHANGELOG.md
+  from all three repos (Engine, Profiles, Website) live from GitHub, with
+  tab switching, colour-coded section labels, and inline markdown formatting.
+- `/changelog` redirects to `/changelogs` via meta-refresh and JS.
+- "Changelogs" added to the nav on all pages.
+
 ## [1.0.8]
 
 ### Changed

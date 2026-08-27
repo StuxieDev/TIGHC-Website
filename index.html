@@ -58,7 +58,8 @@
         <a href="#get-started" class="btn btn-ghost">Get started</a>
       </div>
       <p class="hero-meta">
-        <span class="badge">v3.5.0</span>
+        <span class="badge">v3.7.0</span>
+        <span class="badge">Profiles v1.2.0</span>
         <span class="badge">Windows · Linux · Steam Deck</span>
         <span class="badge">Open source</span>
       </p>
@@ -86,18 +87,17 @@
           group of keybinds, or all of them at once.</p>
         </div>
         <div class="card">
-          <h3>Continuous &amp; pulse bindings</h3>
-          <p>Sustained actions like movement or sneaking drive a
-          continuous vibration for as long as they're held; one-shot
-          actions like jumping or opening an inventory fire a randomized
-          pulse instead. Releasing a key mid-pulse cancels it immediately
-          rather than letting it run to completion.</p>
+          <h3>Hold-until-release bindings</h3>
+          <p>Every binding works the same way: pressing a key fires the
+          vibration at a rolled intensity; holding it sustains; releasing
+          stops it immediately. Scroll wheel fires a short fixed burst
+          since it has no release event. No modes to configure.</p>
         </div>
         <div class="card">
           <h3>Randomized intensity bands</h3>
-          <p>Every binding rolls its intensity (and pulse duration) from a
-          configurable <code>[low, high]</code> range, so nothing feels
-          mechanically repetitive.</p>
+          <p>Every binding rolls its intensity from a configurable
+          <code>[low, high]</code> range each time it fires, so nothing
+          feels mechanically repetitive.</p>
         </div>
         <div class="card">
           <h3>Full GUI, or hand-edit JSON</h3>
@@ -170,8 +170,8 @@
         current list — bindings, window matching, and confirmation status
         for each — fetched live from the profiles repository. Adding a new
         one takes a copy of an existing profile folder and a few edits to
-        keybinds and ranges, from the GUI's "New profile..." button or by
-        hand.
+        <code>profile.json</code>, from the GUI's "New profile..." button
+        or by hand.
       </p>
       <a href="/profiles" class="btn btn-ghost">Browse all profiles</a>
     </div>

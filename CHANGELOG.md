@@ -4,6 +4,17 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
 
+## [1.0.7]
+
+### Changed
+- Version badges updated: engine v3.5.0 → v3.7.0, profiles v1.2.0 badge added.
+- "Continuous & pulse bindings" feature card replaced with "Hold-until-release
+  bindings" — the engine now uses a single unified binding model (TIGHC 3.6.0
+  / 3.7.0); the old continuous/pulse distinction no longer exists.
+- "Randomized intensity bands" card removes the "(and pulse duration)" copy
+  since duration is no longer a configurable field.
+- Game profiles section: "keybinds and ranges" → `profile.json` (TIGHC 3.7.0).
+
 ## [1.0.6]
 
 ### Changed

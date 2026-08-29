@@ -24,19 +24,22 @@ Repository: https://github.com/StuxieDev/TIGHC-Website
 ## Structure
 
 ```
-index.html      # landing page - what TIGHC is, features, how it works, get started
-profiles.html   # game profiles, fetched live from TIGHC-Profiles via the GitHub API
-style.css       # shared styles for both pages
-script.js       # 18+ notice (shown once per browser, via localStorage)
-profiles.js     # fetches profiles.html's content from github.com/StuxieDev/TIGHC-Profiles
-assets/         # logo/icon/author avatar, copied from the main TIGHC repo's assets/
-CNAME           # custom domain (tighc.stuxie.dev) for GitHub Pages
+index.html        # landing page - what TIGHC is, features, how it works, get started
+profiles.html     # game profiles, fetched live from TIGHC-Profiles via the GitHub API
+changelogs.html   # tabbed changelog viewer (Engine / Profiles / Website)
+style.css         # shared styles across all pages
+script.js         # 18+ notice (shown once per browser, via localStorage)
+profiles.js       # fetches profiles.html's content from github.com/StuxieDev/TIGHC-Profiles
+changelogs.js     # fetches and renders CHANGELOG.md from each repo for changelogs.html
+versions.js       # fetches version.txt from each repo on load and populates version badges site-wide
+assets/           # logo/icon/author avatar, copied from the main TIGHC repo's assets/
+CNAME             # custom domain (tighc.stuxie.dev) for GitHub Pages
 ```
 
 `profiles.html` doesn't hardcode the game list - it calls the GitHub
 Contents API to list folders in
 [TIGHC-Profiles](https://github.com/StuxieDev/TIGHC-Profiles), then fetches
-each folder's `keybinds.json` from `raw.githubusercontent.com` to render its
+each folder's `profile.json` from `raw.githubusercontent.com` to render its
 bindings. Adding a profile there shows up here automatically, no edits
 needed on this side.
 

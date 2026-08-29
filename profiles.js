@@ -1,5 +1,5 @@
 (function () {
-  var REPO = "TIGHC/TIGHC-Profiles";
+  var REPO = "TIGHC/Profiles";
   var BRANCH = "main";
   var API_URL = "https://api.github.com/repos/" + REPO + "/contents/";
   var RAW_BASE = "https://raw.githubusercontent.com/" + REPO + "/" + BRANCH + "/";

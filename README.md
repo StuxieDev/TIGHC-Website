@@ -9,12 +9,12 @@
 ![TIGHC](assets/logo.png)
 
 Source for [tighc.stuxie.dev](https://tighc.stuxie.dev), the landing site
-for [TIGHC](https://github.com/TIGHC/TIGHC) (The Intiface Game Haptics
+for [TIGHC](https://github.com/TIGHC/Engine) (The Intiface Game Haptics
 Controller). Plain HTML/CSS/JS, served directly from this repo via GitHub
 Pages - no build step.
 
 Website: https://tighc.stuxie.dev  
-Repository: https://github.com/TIGHC/TIGHC-Website
+Repository: https://github.com/TIGHC/Website
 
 ## Author
 
@@ -33,7 +33,7 @@ profiles.html     # game profiles, fetched live from TIGHC-Profiles via the GitH
 changelogs.html   # tabbed changelog viewer (Engine / Profiles / Website)
 style.css         # shared styles across all pages
 script.js         # 18+ notice (shown once per browser, via localStorage)
-profiles.js       # fetches profiles.html's content from github.com/TIGHC/TIGHC-Profiles
+profiles.js       # fetches profiles.html's content from github.com/TIGHC/Profiles
 changelogs.js     # fetches and renders CHANGELOG.md from each repo for changelogs.html
 versions.js       # fetches version.txt from each repo on load and populates version badges site-wide
 assets/           # logo/icon/author avatar, copied from the main TIGHC repo's assets/
@@ -42,7 +42,7 @@ CNAME             # custom domain (tighc.stuxie.dev) for GitHub Pages
 
 `profiles.html` doesn't hardcode the game list - it calls the GitHub
 Contents API to list folders in
-[TIGHC-Profiles](https://github.com/TIGHC/TIGHC-Profiles), then fetches
+[TIGHC-Profiles](https://github.com/TIGHC/Profiles), then fetches
 each folder's `profile.json` from `raw.githubusercontent.com` to render its
 bindings. Adding a profile there shows up here automatically, no edits
 needed on this side.
@@ -68,4 +68,4 @@ remove it unless the domain setup is changing too.
 Follows [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`),
 independently of the main TIGHC engine's own version - see
 [CHANGELOG.md](CHANGELOG.md) for what changed in each release. Questions,
-issues, or contributions: https://github.com/TIGHC/TIGHC-Website
+issues, or contributions: https://github.com/TIGHC/Website

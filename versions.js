@@ -1,8 +1,8 @@
 (function () {
   var REPOS = {
-    engine:   "TIGHC/TIGHC",
-    profiles: "TIGHC/TIGHC-Profiles",
-    website:  "TIGHC/TIGHC-Website"
+    engine:   "TIGHC/Engine",
+    profiles: "TIGHC/Profiles",
+    website:  "TIGHC/Website"
   };
 
   function fetchVersion(key) {

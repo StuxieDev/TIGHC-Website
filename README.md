@@ -35,7 +35,7 @@ style.css         # shared styles across all pages
 script.js         # 18+ notice (shown once per browser, via localStorage)
 profiles.js       # fetches profiles.html's content from github.com/TIGHC/Profiles
 changelogs.js     # fetches and renders CHANGELOG.md from each repo for changelogs.html
-versions.js       # fetches version.txt from each repo on load and populates version badges site-wide
+versions.js       # fetches VERSION.md from each repo on load and populates version badges site-wide
 assets/           # logo/icon/author avatar, copied from the main TIGHC repo's assets/
 CNAME             # custom domain (tighc.stuxie.dev) for GitHub Pages
 ```

@@ -6,7 +6,7 @@
   };
 
   function fetchVersion(key) {
-    return fetch("https://raw.githubusercontent.com/" + REPOS[key] + "/main/version.txt")
+    return fetch("https://raw.githubusercontent.com/" + REPOS[key] + "/main/VERSION.md")
       .then(function (r) { return r.ok ? r.text() : null; })
       .then(function (t) { return t ? t.trim() : null; })
       .catch(function () { return null; });

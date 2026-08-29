@@ -1,8 +1,8 @@
 (function () {
   var REPOS = {
-    engine:   "https://raw.githubusercontent.com/StuxieDev/TIGHC/main/CHANGELOG.md",
-    profiles: "https://raw.githubusercontent.com/StuxieDev/TIGHC-Profiles/main/CHANGELOG.md",
-    website:  "https://raw.githubusercontent.com/StuxieDev/TIGHC-Website/main/CHANGELOG.md"
+    engine:   "https://raw.githubusercontent.com/TIGHC/TIGHC/main/CHANGELOG.md",
+    profiles: "https://raw.githubusercontent.com/TIGHC/TIGHC-Profiles/main/CHANGELOG.md",
+    website:  "https://raw.githubusercontent.com/TIGHC/TIGHC-Website/main/CHANGELOG.md"
   };
 
   var SECTION_CLASSES = {

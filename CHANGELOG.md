@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
-of the main [TIGHC](https://github.com/StuxieDev/TIGHC) engine's own version.
+of the main [TIGHC](https://github.com/TIGHC/TIGHC) engine's own version.
 
 ## [1.1.1]
 

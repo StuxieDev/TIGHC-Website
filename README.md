@@ -1,4 +1,4 @@
-# TIGHC-Website
+# TIGHC Website
 
 > **18+ only.** This is the website for TIGHC, software that connects to and
 > controls adult haptic/sex toy devices. Intended for use only by adults aged

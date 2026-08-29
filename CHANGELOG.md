@@ -4,6 +4,16 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/TIGHC/Engine) engine's own version.
 
+## [1.1.2]
+
+### Fixed
+- **Footer version label** — the footer now shows "Website vX.X.X" instead of
+  just "vX.X.X" to distinguish it from the Engine version.
+
+### Changed
+- **Repo moved to TIGHC org** — all URLs updated from `StuxieDev/TIGHC-Website`
+  to `TIGHC/Website`.
+
 ## [1.1.1]
 
 ### Changed

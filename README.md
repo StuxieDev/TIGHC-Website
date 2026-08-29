@@ -1,5 +1,9 @@
 # TIGHC-Website
 
+> **18+ only.** This is the website for TIGHC, software that connects to and
+> controls adult haptic/sex toy devices. Intended for use only by adults aged
+> 18 or older.
+
 **Version 1.1.1** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ![TIGHC](assets/logo.png)

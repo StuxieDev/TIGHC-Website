@@ -4,6 +4,13 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/TIGHC/Engine) engine's own version.
 
+## [1.1.3]
+
+### Added
+- **Engine page** (`/engine`) — new page covering installation, all GUI tabs,
+  profiles/bindings/priority, and Linux/Steam Deck setup. Linked from the nav
+  on all pages.
+
 ## [1.1.2]
 
 ### Fixed

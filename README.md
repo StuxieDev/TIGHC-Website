@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" width="500" alt="The Intiface Game Haptics Controller (TIGHC)">
+</p>
+
 # TIGHC Website
 
 > **18+ only.** This is the website for TIGHC, software that connects to and
@@ -5,8 +9,6 @@
 > 18 or older.
 
 **Version 1.1.6** — see [CHANGELOG.md](CHANGELOG.md) for release history.
-
-![TIGHC](assets/logo.png)
 
 Source for [tighc.stuxie.dev](https://tighc.stuxie.dev), the landing site
 for [TIGHC](https://github.com/TIGHC/Engine) (The Intiface Game Haptics

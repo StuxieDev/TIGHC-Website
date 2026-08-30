@@ -4,7 +4,7 @@
 > controls adult haptic/sex toy devices. Intended for use only by adults aged
 > 18 or older.
 
-**Version 1.1.5** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.1.6** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ![TIGHC](assets/logo.png)
 

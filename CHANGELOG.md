@@ -4,6 +4,12 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/TIGHC/Engine) engine's own version.
 
+## [1.1.6]
+
+### Added
+- **`commit.bat`/`commit.sh`** — pre-written commit+tag scripts, rewritten
+  with each commit's exact message/tag before being run.
+
 ## [1.1.5]
 
 ### Added

@@ -8,7 +8,7 @@
 > controls adult haptic/sex toy devices. Intended for use only by adults aged
 > 18 or older.
 
-**Version 1.1.6** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.2.0** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [tighc.stuxie.dev](https://tighc.stuxie.dev), the landing site
 for [TIGHC](https://github.com/TIGHC/Engine) (The Intiface Game Haptics
@@ -31,13 +31,20 @@ Repository: https://github.com/TIGHC/Website
 
 ```
 index.html        # landing page - what TIGHC is, features, how it works, get started
+engine.html       # install/usage docs for the Engine (GUI, CLI, profiles, devices, settings)
 profiles.html     # game profiles, fetched live from TIGHC-Profiles via the GitHub API
 changelogs.html   # tabbed changelog viewer (Engine / Profiles / Website)
+legal.html        # "Boring Legal Stuff" hub, linking to legal/*.html
+legal/            # privacy, terms, cookies, imprint, disclaimer, opt-out pages
 style.css         # shared styles across all pages
 script.js         # 18+ notice (shown once per browser, via localStorage)
 profiles.js       # fetches profiles.html's content from github.com/TIGHC/Profiles
 changelogs.js     # fetches and renders CHANGELOG.md from each repo for changelogs.html
 versions.js       # fetches VERSION.md from each repo on load and populates version badges site-wide
+dev-config.js     # written by dev-server.py at startup - gitignored, never deployed
+dev-server.py     # local dev server shared by dev-server.sh/.bat (see Local preview below)
+dev-server.sh     # Unix wrapper for dev-server.py
+dev-server.bat    # Windows wrapper for dev-server.py
 assets/           # logo/icon/author avatar, copied from the main TIGHC repo's assets/
 CNAME             # custom domain (tighc.stuxie.dev) for GitHub Pages
 ```
@@ -51,13 +58,18 @@ needed on this side.
 
 ## Local preview
 
-No build tooling required - just serve the folder root and open it:
+No build tooling required. Run `./dev-server.sh` (or `dev-server.bat` on
+Windows) and visit `http://127.0.0.1:8000`. This forces dev mode on by
+default: `profiles.js`/`changelogs.js`/`versions.js` load Engine/Profiles/
+Website content from the sibling checkouts next to this one (`../Engine`,
+`../Profiles`) instead of GitHub, so local edits to those repos' profiles,
+`CHANGELOG.md`, or `VERSION.md` show up here without pushing first. Pass
+`--no-dev-mode` to fetch from GitHub instead, matching production, or a
+port number to use something other than 8000.
 
-```
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
+Prefer a plain static server with no dev-mode behavior? `python -m
+http.server 8000` works too - version/changelog/profile content will just
+always come from GitHub, same as production.
 
 ## Deploying
 

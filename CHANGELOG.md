@@ -4,6 +4,32 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/TIGHC/Engine) engine's own version.
 
+## [1.2.0]
+
+### Added
+- **"Boring Legal Stuff" hub** (`/legal`) — links to six new pages: Privacy
+  Policy, Terms and Ethics, Cookies Policy, Imprint, Disclaimer, and
+  Opt-Out Preferences (`/legal/privacy`, `/legal/terms`, etc.), each
+  written for TIGHC specifically (the site's actual data flows, the
+  Engine's local-only storage, hardware-safety and consent-focused ethics
+  guidance, and the lack of a published code license). Linked from every
+  page's footer.
+- **OpenGraph and Twitter Card metadata** on every page — title,
+  description, canonical URL, and a shared preview image — so links shared
+  elsewhere show a proper preview instead of a bare URL.
+- **`dev-server.py`/`.sh`/`.bat`** — a local dev server with DEV_MODE forced
+  on by default: `profiles.js`/`changelogs.js`/`versions.js` load Engine/
+  Profiles/Website content from the sibling checkouts next to this one
+  instead of GitHub, so local edits to those repos show up here without
+  pushing first. `--no-dev-mode` falls back to live GitHub content.
+
+### Fixed
+- **`commit.sh`/`commit.bat` staleness** — they hardcoded the version and
+  commit message per release, so a forgotten update would tag the wrong
+  version or skip tagging entirely. Both now read the version from
+  `VERSION.md` dynamically, skip committing if nothing's staged, and skip
+  tagging if the tag already exists.
+
 ## [1.1.6]
 
 ### Added

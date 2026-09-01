@@ -4,9 +4,13 @@
     profiles: "TIGHC/Profiles",
     website:  "TIGHC/Website"
   };
+  var DEV = window.TIGHC_DEV;
 
   function fetchVersion(key) {
-    return fetch("https://raw.githubusercontent.com/" + REPOS[key] + "/main/VERSION.md")
+    var url = DEV
+      ? DEV.repos[key] + "/VERSION.md"
+      : "https://raw.githubusercontent.com/" + REPOS[key] + "/main/VERSION.md";
+    return fetch(url)
       .then(function (r) { return r.ok ? r.text() : null; })
       .then(function (t) { return t ? t.trim() : null; })
       .catch(function () { return null; });

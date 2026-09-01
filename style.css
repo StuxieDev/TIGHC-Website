@@ -236,6 +236,41 @@ code {
 
 .platform-grid { margin-top: 28px; }
 
+/* Legal pages */
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.legal-card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+.legal-card:hover { border-color: var(--accent); text-decoration: none; }
+.legal-card h3 { margin-bottom: 4px; color: var(--text); }
+.legal-card p { color: var(--text-dim); margin: 0; font-size: 0.9rem; }
+
+.legal-prose { max-width: 720px; }
+.legal-prose h2 { font-size: 1.25rem; margin: 40px 0 14px; }
+.legal-prose h2:first-child { margin-top: 0; }
+.legal-prose p, .legal-prose li { color: var(--text-dim); }
+.legal-prose ul { padding-left: 22px; margin: 12px 0; }
+.legal-prose li { margin-bottom: 6px; }
+.legal-meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: -8px 0 28px;
+}
+.legal-back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
 /* Steps */
 .steps {
   list-style: none;
@@ -496,7 +531,7 @@ code {
     border-radius: 6px;
   }
 
-  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  .grid-3, .grid-2, .legal-grid { grid-template-columns: 1fr; }
   .hero { padding: 48px 0 40px; }
   h2 { font-size: 1.5rem; }
   .hero-logo { max-width: 220px; }

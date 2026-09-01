@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Legal — TIGHC</title>
+<meta name="description" content="TIGHC's privacy policy: what this website and the Engine software do and don't collect.">
+<link rel="canonical" href="https://tighc.stuxie.dev/legal/privacy">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TIGHC">
+<meta property="og:title" content="Privacy Policy | Legal — TIGHC">
+<meta property="og:description" content="TIGHC's privacy policy: what this website and the Engine software do and don't collect.">
+<meta property="og:url" content="https://tighc.stuxie.dev/legal/privacy">
+<meta property="og:image" content="https://tighc.stuxie.dev/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy | Legal — TIGHC">
+<meta name="twitter:description" content="TIGHC's privacy policy: what this website and the Engine software do and don't collect.">
+<meta name="twitter:image" content="https://tighc.stuxie.dev/assets/logo.png">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="shortcut icon" href="../assets/favicon.ico">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="age-gate" class="age-gate">
+  <div class="age-gate-box">
+    <img src="../assets/logo.png" alt="TIGHC" class="age-gate-logo">
+    <p><strong>This site describes 18+ software.</strong></p>
+    <p>TIGHC connects to and controls adult haptic/sex toy devices based on
+    your keyboard and mouse input while gaming. It's intended only for
+    adults aged 18 or older.</p>
+    <div class="age-gate-actions">
+      <button id="age-confirm" class="btn btn-accent">I'm 18 or older — enter</button>
+      <a href="https://www.google.com" class="btn btn-ghost">Leave</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand">
+      <img src="../assets/icon.png" alt="" class="brand-icon">
+      <span>TIGHC</span>
+    </a>
+    <nav class="site-nav">
+      <a href="/#features">Features</a>
+      <a href="/#how-it-works">How it works</a>
+      <a href="/engine">Engine</a>
+      <a href="/profiles">Profiles</a>
+      <a href="/changelogs">Changelogs</a>
+      <a href="https://github.com/TIGHC/Engine" class="nav-gh">GitHub</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero profiles-hero">
+    <div class="container hero-inner">
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="hero-sub">We built TIGHC to be private by default. Neither this site nor the Engine software send your data anywhere we control.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <a href="/legal" class="legal-back">&larr; Boring Legal Stuff</a>
+      <div class="legal-prose">
+        <p class="legal-meta">Effective: September 2026 &mdash; applies to this website (tighc.stuxie.dev) and the TIGHC Engine software.</p>
+
+        <h2>The short version</h2>
+        <p>This website is static HTML/CSS/JS hosted on GitHub Pages — there's no TIGHC-operated server for it to send data to. The Engine software (the actual haptics controller you run on your PC) is a local desktop app: your profiles, device nicknames, and settings live in files on your own machine, and are never uploaded anywhere.</p>
+
+        <h2>This website</h2>
+        <p>The site itself collects nothing. There's no account system, no forms, no analytics, and no advertising anywhere on tighc.stuxie.dev.</p>
+        <p>A few pages fetch content live, directly from your browser, from GitHub's own servers:</p>
+        <ul>
+          <li>The <a href="/profiles">Profiles page</a> lists folders and fetches <code>profile.json</code> files from the <a href="https://github.com/TIGHC/Profiles" target="_blank" rel="noopener">TIGHC/Profiles</a> repo via GitHub's Contents API.</li>
+          <li>The <a href="/changelogs">Changelogs page</a> and the version badges shown around the site fetch <code>CHANGELOG.md</code> and <code>VERSION.md</code> from GitHub's raw content servers for all three TIGHC repos.</li>
+        </ul>
+        <p>These requests go straight from your browser to <code>api.github.com</code> and <code>raw.githubusercontent.com</code> — we never see them, and GitHub handles them under its own <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy statement</a>. GitHub Pages, which hosts this site, also operates under that same statement for whatever it logs about visits here.</p>
+
+        <h2>localStorage</h2>
+        <p>The only thing this site stores in your browser is a single flag, <code>tighc-age-confirmed</code>, set once you click through the 18+ notice so you're not shown it again. It never leaves your device and can be cleared any time via your browser's site data settings.</p>
+
+        <h2>The Engine software</h2>
+        <p>TIGHC Engine (<code>gui.py</code>/<code>cli.py</code>) runs entirely on your own computer. It talks to two things, both of which you configure yourself:</p>
+        <ul>
+          <li><strong>Your Intiface Central instance</strong> — a WebSocket connection to whatever address you point it at, normally running on your own machine.</li>
+          <li><strong>SteamGridDB</strong> — only if you opt in and provide your own API key in Settings, to fetch cover art. Your key is stored in plain text in <code>configs/steamgriddb_config.json</code> on your machine, never transmitted anywhere but SteamGridDB's API.</li>
+        </ul>
+        <p>Everything else — profiles, device nicknames, haptics settings, the age confirmation you give the app on first launch — is stored locally in <code>%APPDATA%\TIGHC\</code> (or <code>~/.local/share/TIGHC/</code> on Linux) and is never uploaded anywhere. The one exception: on first launch, the Engine downloads the current profiles from the public <a href="https://github.com/TIGHC/Profiles" target="_blank" rel="noopener">TIGHC/Profiles</a> repo — a one-way download, not a data submission.</p>
+
+        <h2>Children's privacy</h2>
+        <p>Both this site and the Engine software are intended only for adults aged 18 or older, and neither is directed at children. The 18+ notice on this site and the confirmation the Engine asks for on first launch are self-certification, not identity verification — we have no way to verify age, and don't collect any information that would let us try.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes meaningfully, the date above will be updated. There's no mailing list or notification system, so check back here if you're curious.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about privacy? Open an issue on <a href="https://github.com/TIGHC/Engine/issues">GitHub</a> or email <a href="mailto:contact@stuxie.dev">contact@stuxie.dev</a>.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <img src="../assets/icon.png" alt="" class="footer-icon">
+      <span>TIGHC — The Intiface Game Haptics Controller</span>
+      <span class="footer-ver" data-version="website" data-version-prefix="Website "></span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/TIGHC/Engine">GitHub</a>
+      <a href="https://github.com/TIGHC/Profiles">Profiles repo</a>
+      <a href="https://github.com/TIGHC/Engine/issues">Issues &amp; contact</a>
+      <a href="https://github.com/StuxieDev">By StuxieDev</a>
+      <a href="/legal">Boring Legal Stuff</a>
+    </div>
+  </div>
+  <p class="footer-note">
+    Unaffiliated with Intiface/Nonpolynomial Labs. Requires your own
+    Buttplug/Intiface-compatible hardware. 18+ only.
+  </p>
+</footer>
+
+<script src="../script.js"></script>
+<script src="../dev-config.js"></script>
+<script src="../versions.js"></script>
+</body>
+</html>

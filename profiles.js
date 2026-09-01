@@ -1,8 +1,9 @@
 (function () {
   var REPO = "TIGHC/Profiles";
   var BRANCH = "main";
-  var API_URL = "https://api.github.com/repos/" + REPO + "/contents/";
-  var RAW_BASE = "https://raw.githubusercontent.com/" + REPO + "/" + BRANCH + "/";
+  var DEV = window.TIGHC_DEV;
+  var API_URL = DEV ? DEV.profilesApi : "https://api.github.com/repos/" + REPO + "/contents/";
+  var RAW_BASE = DEV ? DEV.repos.profiles + "/" : "https://raw.githubusercontent.com/" + REPO + "/" + BRANCH + "/";
 
   var statusEl = document.getElementById("profile-status");
   var gridEl = document.getElementById("profile-grid");

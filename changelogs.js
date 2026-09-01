@@ -1,5 +1,10 @@
 (function () {
-  var REPOS = {
+  var DEV = window.TIGHC_DEV;
+  var REPOS = DEV ? {
+    engine:   DEV.repos.engine + "/CHANGELOG.md",
+    profiles: DEV.repos.profiles + "/CHANGELOG.md",
+    website:  DEV.repos.website + "/CHANGELOG.md"
+  } : {
     engine:   "https://raw.githubusercontent.com/TIGHC/Engine/main/CHANGELOG.md",
     profiles: "https://raw.githubusercontent.com/TIGHC/Profiles/main/CHANGELOG.md",
     website:  "https://raw.githubusercontent.com/TIGHC/Website/main/CHANGELOG.md"

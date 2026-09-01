@@ -10,28 +10,28 @@ Issues and pull requests are welcome at
 ## Getting set up
 
 No build tooling required - plain HTML/CSS/JS. See the [README](README.md)
-for the file structure. To preview locally:
-
-```
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
+for the file structure. To preview locally, run `./dev-server.sh` (or
+`dev-server.bat` on Windows) and visit `http://127.0.0.1:8000` - this loads
+Engine/Profiles content from the sibling checkouts next to this one instead
+of GitHub, so local edits to those repos show up immediately. Pass
+`--no-dev-mode` to test against live GitHub content instead.
 
 ## Making a change
 
 - Keep pages consistent with `style.css` - avoid inline styles or one-off
   CSS unless there's a good reason.
-- If you add a page, link it from the nav on every existing page (see how
-  `index.html` and the others do it).
-- `profiles.js` and `changelogs.js` fetch live content from the
-  [TIGHC/Profiles](https://github.com/TIGHC/Profiles) and
+- If you add a page, link it from the nav and footer on every existing page
+  (see how `index.html` and the others do it), including the
+  `/legal` "Boring Legal Stuff" footer link.
+- `profiles.js`, `changelogs.js`, and `versions.js` fetch live content from
+  the [TIGHC/Profiles](https://github.com/TIGHC/Profiles) and
   [TIGHC/Engine](https://github.com/TIGHC/Engine) repos at runtime - test
-  changes to them with a real local server (not `file://`), since `fetch`
-  needs an HTTP origin.
-- Check both light and dark rendering if you touch `style.css`, and a
-  narrow viewport if you touch layout (the site is responsive down to
-  mobile widths).
+  changes to them with `./dev-server.sh`/`dev-server.bat` (not `file://`),
+  since `fetch` needs an HTTP origin.
+- Check a narrow viewport if you touch layout (the site is responsive down
+  to mobile widths). There's no light theme to check - the site is dark-only.
+- Any new page needs OpenGraph/Twitter meta tags and a `<link rel="canonical">`
+  in its `<head>` - copy the pattern from an existing page.
 
 ## Versioning
 

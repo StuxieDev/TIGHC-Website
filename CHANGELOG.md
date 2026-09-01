@@ -4,6 +4,13 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/TIGHC/Engine) engine's own version.
 
+## [1.2.1]
+
+### Added
+- **Terms and Ethics disclaimer on the age gate** — every page's 18+ notice
+  now states "By continuing, you agree to our Terms and Ethics of Use",
+  linking to [/legal/terms](/legal/terms).
+
 ## [1.2.0]
 
 ### Added

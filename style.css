@@ -70,6 +70,7 @@ code {
   text-align: center;
 }
 .age-gate-logo { max-width: 220px; margin-bottom: 20px; }
+.age-gate-terms { color: var(--text-dim); font-size: 0.85rem; margin-top: 12px; }
 .age-gate-actions {
   display: flex;
   gap: 12px;

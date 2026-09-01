@@ -1,5 +1,5 @@
 @echo off
-REM TIGHC Website — Local dev server (Windows)
+REM TIGHC Website - Local dev server (Windows)
 REM Usage: dev-server.bat [port] [--no-dev-mode]
 REM   port            default: 8000
 REM   --no-dev-mode   fetch Engine/Profiles/Website content from GitHub

@@ -1,5 +1,5 @@
 #!/bin/bash
-# TIGHC Website — Local dev server
+# TIGHC Website - Local dev server
 # Usage: ./dev-server.sh [port] [--no-dev-mode]
 #   port            default: 8000
 #   --no-dev-mode   fetch Engine/Profiles/Website content from GitHub
@@ -7,7 +7,7 @@
 #                   behavior) for this run
 #
 # DEV_MODE is forced ON for every run of this script, regardless of what
-# was passed last time — that's what makes profiles.js/changelogs.js/
+# was passed last time - that's what makes profiles.js/changelogs.js/
 # versions.js read Engine/Profiles/Website content from the sibling
 # checkouts next to this one (../Engine, ../Profiles) instead of GitHub, so
 # local edits to those repos show up here without pushing first. Pass

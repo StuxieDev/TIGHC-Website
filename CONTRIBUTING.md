@@ -10,11 +10,7 @@ Issues and pull requests are welcome at
 ## Getting set up
 
 No build tooling required - plain HTML/CSS/JS. See the [README](README.md)
-for the file structure. To preview locally, run `./dev-server.sh` (or
-`dev-server.bat` on Windows) and visit `http://127.0.0.1:8000` - this loads
-Engine/Profiles content from the sibling checkouts next to this one instead
-of GitHub, so local edits to those repos show up immediately. Pass
-`--no-dev-mode` to test against live GitHub content instead.
+for the file structure and [DEV_GUIDE.md](DEV_GUIDE.md) to preview locally.
 
 ## Making a change
 
@@ -44,7 +40,7 @@ independent of the main Engine's own version.
 
 Merges to `main` publish automatically via GitHub Pages - no separate deploy
 step. Don't remove the `CNAME` file unless the custom domain setup is
-changing too.
+changing too. See [INSTALL.md](INSTALL.md) for self-hosting elsewhere.
 
 ## Reporting a bug
 

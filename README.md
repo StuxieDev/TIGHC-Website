@@ -8,7 +8,7 @@
 > controls adult haptic/sex toy devices. Intended for use only by adults aged
 > 18 or older.
 
-**Version 1.2.3** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.2.4** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [tighc.stuxie.dev](https://tighc.stuxie.dev), the landing site
 for [TIGHC](https://github.com/TIGHC/Engine) (The Intiface Game Haptics
@@ -64,7 +64,8 @@ See [DEV_GUIDE.md](DEV_GUIDE.md) to run the site locally.
 
 GitHub Pages is configured to serve from this repo's root on `main` - just
 push. The `CNAME` file points the custom domain at GitHub Pages; don't
-remove it unless the domain setup is changing too.
+remove it unless the domain setup is changing too. See
+[INSTALL.md](INSTALL.md) for self-hosting elsewhere.
 
 ## Versioning and contact
 

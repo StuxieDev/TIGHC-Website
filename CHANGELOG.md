@@ -4,6 +4,19 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/TIGHC/Engine) engine's own version.
 
+## [1.2.4]
+
+### Added
+- **`INSTALL.md`** — deployment guide covering GitHub Pages (production)
+  and self-hosting on any other static host, matching the pattern used by
+  Stuxs.Tools/Downl.one.
+
+### Changed
+- **`CONTRIBUTING.md`'s "Getting set up"** — now points to
+  [DEV_GUIDE.md](DEV_GUIDE.md) instead of duplicating its instructions.
+- **`README.md`/`CONTRIBUTING.md`'s "Deploying"** — now cross-reference
+  [INSTALL.md](INSTALL.md) for self-hosting elsewhere.
+
 ## [1.2.3]
 
 ### Added

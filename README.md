@@ -8,7 +8,7 @@
 > controls adult haptic/sex toy devices. Intended for use only by adults aged
 > 18 or older.
 
-**Version 1.2.2** — see [CHANGELOG.md](CHANGELOG.md) for release history.
+**Version 1.2.3** — see [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Source for [tighc.stuxie.dev](https://tighc.stuxie.dev), the landing site
 for [TIGHC](https://github.com/TIGHC/Engine) (The Intiface Game Haptics
@@ -58,18 +58,7 @@ needed on this side.
 
 ## Local preview
 
-No build tooling required. Run `./dev-server.sh` (or `dev-server.bat` on
-Windows) and visit `http://127.0.0.1:8000`. This forces dev mode on by
-default: `profiles.js`/`changelogs.js`/`versions.js` load Engine/Profiles/
-Website content from the sibling checkouts next to this one (`../Engine`,
-`../Profiles`) instead of GitHub, so local edits to those repos' profiles,
-`CHANGELOG.md`, or `VERSION.md` show up here without pushing first. Pass
-`--no-dev-mode` to fetch from GitHub instead, matching production, or a
-port number to use something other than 8000.
-
-Prefer a plain static server with no dev-mode behavior? `python -m
-http.server 8000` works too - version/changelog/profile content will just
-always come from GitHub, same as production.
+See [DEV_GUIDE.md](DEV_GUIDE.md) to run the site locally.
 
 ## Deploying
 

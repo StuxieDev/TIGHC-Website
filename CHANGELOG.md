@@ -4,6 +4,15 @@ All notable changes to this project are documented here. Versioning follows
 [Semantic Versioning](https://semver.org/) (`MAJOR.MINOR.PATCH`), independent
 of the main [TIGHC](https://github.com/TIGHC/Engine) engine's own version.
 
+## [1.2.3]
+
+### Added
+- **`DEV_GUIDE.md`** — a dedicated local-development guide (requirements,
+  sibling-repo checkout layout, dev server flags, verification steps,
+  troubleshooting), matching the pattern used by Stuxs.Tools/Downl.one.
+  The README's "Local preview" section now just points to it instead of
+  duplicating the content.
+
 ## [1.2.2]
 
 ### Fixed
